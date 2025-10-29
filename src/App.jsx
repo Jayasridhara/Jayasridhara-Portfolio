@@ -440,22 +440,6 @@ const Hero = () => (
   // --- Projects Data ---
   const projectsData = [
   {
-    title: "Enterprise CRM Dashboard",
-    description: "A comprehensive CRM solution built for managing sales pipelines, customer interactions, and generating performance reports. Features JWT authentication and role-based access.",
-    techStack: ["React", "Redux Toolkit", "Node.js", "Express", "MongoDB", "Chart.js"],
-    githubLink: "https://github.com/yourusername/crm-dashboard",
-    demoLink: "https://demo.crm.com",
-    image: "https://placehold.co/600x400/0D9488/FFFFFF?text=CRM+Dashboard"
-  },
-  {
-    title: "Real-time Chat Application",
-    description: "A multi-user chat platform with instant messaging, presence status, and group chat capabilities. Utilizes WebSockets for real-time bidirectional communication.",
-    techStack: ["React", "Socket.IO", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
-    githubLink: "https://github.com/yourusername/realtime-chat",
-    demoLink: "https://chat-app.com",
-    image: "https://placehold.co/600x400/10B981/FFFFFF?text=Chat+App"
-  },
-  {
     title: "MERN E-Commerce Store",
     description: "A scalable e-commerce site featuring a product catalog, secure payment integration (Stripe), Order management and Seller Dashboard to manage daily reports.",
     techStack: ["React Router", "Redux", "Node.js", "Express", "Mongoose", "Stripe API"],
