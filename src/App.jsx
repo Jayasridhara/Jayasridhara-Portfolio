@@ -166,7 +166,7 @@ function App() {
         {/* Logo/Name */}
         <h1 className="text-xl md:text-2xl font-extrabold text-white">
           <a href="#home" onClick={(e) => { e.preventDefault(); scrollToSection('home'); }}>
-            <span className="text-teal-400">&lt;</span>Developer<span className="text-teal-400">/&gt;</span>
+            <span className="text-teal-400">&lt;</span>MERN Developer<span className="text-teal-400">/&gt;</span>
           </a>
         </h1>
         
