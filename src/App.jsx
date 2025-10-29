@@ -292,18 +292,18 @@ function App() {
 const Hero = () => (
   <Section
     id="home"
-    className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white overflow-hidden pt-32 pb-24"
+    className="relative bg-linear-to-br from-gray-900 via-gray-800 to-black text-white overflow-x-hidden pt-20 pb-12 sm:pt-32 sm:pb-24"
   >
     {/* Animated Background Grid */}
     <GridBackground />
 
-    <div className="relative z-10 container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    <div className="relative z-10 container mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 items-center">
       {/* LEFT SIDE - Text Content */}
       <div className="max-w-2xl">
         <h2 className="text-xl font-medium text-teal-400 mb-3 tracking-wide">
           👋 Hello, I'm
         </h2>
-        <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-3">
+        <h1 className="text-4xl md:text-7xl font-extrabold text-white leading-tight mb-3">
           Jayasridhara.B
         </h1>
         <h3 className="text-2xl md:text-3xl font-semibold text-teal-400 mb-6">
@@ -326,14 +326,14 @@ const Hero = () => (
             className="inline-flex items-center space-x-2 bg-teal-600 text-gray-900 px-6 py-3 rounded-lg font-bold shadow-xl hover:bg-teal-500 transition duration-300 transform hover:scale-105"
           >
             <span>View Projects</span>
-            <ArrowRight className="w-5 h-5" />
+            <ArrowRight className="w-4 h-5" />
           </a>
 
           <button
             onClick={handleOpenResume}
             className="inline-flex items-center space-x-2 border-2 border-teal-600 text-teal-400 px-6 py-3 rounded-lg font-bold hover:bg-teal-600/20 transition duration-300 transform hover:scale-105"
           >
-            <Download className="w-5 h-5" />
+            <Download className="w-4 h-5" />
             <span>Download CV</span>
           </button>
         </div>
@@ -352,23 +352,12 @@ const Hero = () => (
       </div>
 
       {/* RIGHT SIDE - Animated Developer Image */}
-      <div className="relative flex justify-center items-center overflow-hidden">
-  {/* Glowing Background Circle */}
-  <div className="absolute w-96 h-full bg-teal-500/20 blur-4xl rounded-full animate-pulse" />
-
-  {/* Image as larger background style */}
+   <div className="relative flex justify-center items-center overflow-hidden">
+  <div className="hidden md:block absolute w-96 md:w-md h-full bg-teal-500/20 blur-4xl rounded-full animate-pulse" />
   <img
     src={heroimg}
     alt="Developer illustration"
-    className="
-      relative 
-      w-full max-w-xl md:max-w-2xl 
-      h-auto 
-      drop-shadow-2xl 
-      animate-float 
-      object-contain
-      bg-none
-    "
+    className="relative w-full max-w-xs sm:max-w-lg md:max-w-2xl h-auto drop-shadow-2xl animate-float object-contain"
   />
 </div>
 
