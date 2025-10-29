@@ -541,8 +541,8 @@ const Hero = () => (
   const Footer = () => (
     <footer className="bg-gray-900 border-t border-gray-700 text-gray-400 py-6">
       <div className="container mx-auto px-4 sm:px-8 text-center text-sm">
-        <p>&copy; {new Date().getFullYear()} John Doe. All rights reserved.</p>
-        <p className="mt-1">Designed and Built with React & Tailwind CSS.</p>
+        <p>&copy; {new Date().getFullYear()} jayasridhara.com. All rights reserved.</p>
+        <p className="mt-1">@copyrights my portfolio.</p>
       </div>
     </footer>
   );
