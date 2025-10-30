@@ -50,7 +50,7 @@ const ProjectCard = ({ project, hoverSupported }) => {
           }`}
       >
         <h4 className="text-3xl font-bold text-white mb-3">{project.title}</h4>
-        <p className="text-gray-300 mb-4 text-lg max-w-3xl">
+        <p className="bg-gray-700/80 text-white mb-4 text-lg max-w-3xl rounded-xl ">
           {project.description}
         </p>
         <div className="flex flex-wrap gap-2 mb-4">
