@@ -390,10 +390,10 @@ const Hero = () => (
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
         <FadeInOnScroll animation="fadeInLeft" delay={200} className="lg:col-span-2">
           <p className="text-lg text-gray-300 leading-relaxed mb-6">
-            I am a dedicated **Full Stack MERN Developer** with **2+ years of experience** specializing in building modern, responsive, and highly efficient web applications. My expertise lies in architecting robust **Node.js/Express.js APIs** and creating dynamic, state-of-the-art user interfaces with **React**.
+            I am a dedicated Full Stack MERN Developer with 2+ years of experience specializing in building modern, responsive, and highly efficient web applications. My expertise lies in architecting robust Node.js/Express.js APIs and creating dynamic, state-of-the-art user interfaces with React.
           </p>
           <p className="text-lg text-gray-300 leading-relaxed mb-6">
-            I excel in translating complex business requirements into high-quality code. I'm proficient in state management using **Redux Toolkit/Context API**, database modeling with **MongoDB**, and deployment strategies. I am committed to continuous learning and applying **best practices** in software development.
+            I excel in translating complex business requirements into high-quality code. I'm proficient in state management using Redux Toolkit/Context API, database modeling with MongoDB, and deployment strategies. I am committed to continuous learning and applying best practices in software development.
           </p>
           <div className="mt-8">
             <a
