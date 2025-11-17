@@ -6,7 +6,7 @@ import project2 from "../src/assets/Project2.png";
 import project3 from "../src/assets/Project3.png";
 import Projects from './Projects';
 // Placeholder for your Resume PDF. IMPORTANT: Update this URL to your actual resume file!
-const RESUME_PDF_URL = 'https://drive.google.com/file/d/1-IHQUHvdN7HFOe0st39L16Hj1xoz-nmp/view'; 
+const RESUME_PDF_URL = 'https://drive.google.com/file/d/1iF8QIR3FMmHqGkVLDmnOTpAthZCMmmB0/view'; 
 
 // --- Animated Typing Component for Hero Text ---
 const Typewriter = React.memo(({ text = '', delay = 0 }) => {
