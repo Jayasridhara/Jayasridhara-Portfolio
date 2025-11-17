@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Mail, Linkedin, Github, User, Briefcase, Download, ArrowRight, Menu, X, Code, Database, Server, Monitor, Zap } from 'lucide-react';
 import heroimg from "../src/assets/heroimage.png";
 import project1 from "../src/assets/Project1.png";
+import project2 from "../src/assets/Project2.png";
+import project3 from "../src/assets/Project3.png";
 import Projects from './Projects';
 // Placeholder for your Resume PDF. IMPORTANT: Update this URL to your actual resume file!
 const RESUME_PDF_URL = 'https://drive.google.com/file/d/1-IHQUHvdN7HFOe0st39L16Hj1xoz-nmp/view'; 
@@ -430,12 +432,35 @@ const Hero = () => (
   const projectsData = [
   {
     title: "MERN E-Commerce Store",
-    description: "A scalable e-commerce site featuring a product catalog, secure payment integration (Stripe), Order management and Seller Dashboard to manage daily reports.",
-    techStack: ["React Router", "Redux", "Node.js", "Express", "Mongoose", "Stripe API"],
+    description: "A scalable e-commerce platform featuring a rich product catalog with images, detailed descriptions, pricing, and real-time stock tracking. It includes live inventory management with low-stock alerts, full order processing with history and status tracking, and a seller dashboard showing sales reports, trends, and inventory insights. Secure payments are handled via Stripe, while JWT-based authentication ensures safe, stateless sessions for both buyers and sellers. SendGrid powers email notifications for order updates, shipping alerts, and stock warnings, with role-based templates for buyers and sellers.",
+    techStack: ["React.js", "Node.js", "Express", "Mongo DB","Mongoose","RESTful APIs","Tailwind CSS","Router", "Redux", "Stripe API","JWT Authentication","Axios","Vite","ES6+ Javascript"],
     githubLink: "https://github.com/Jayasridhara/ecommerce-frontend",
     demoLink: "https://shopversein.netlify.app/",
     image: project1
   },
+
+  {
+    title: "MERN Doctor Appointment Booking",
+    description: "Prescripto is a full-stack doctor appointment booking platform built with the MERN stack and styled using Tailwind CSS. It allows patients to register, manage profiles, browse doctors by specialization, book appointments, and pay via Cash or Stripe. Doctors receive their own dashboard to manage profiles, view appointments, and update appointment status, while admins can manage doctors, monitor system activity, and view platform analytics. The application includes role-based dashboards, secure authentication, online payments, and real-time appointment management for a smooth and reliable healthcare booking experience.",
+    techStack: ["React.js", "Node.js", "Express", "Mongo DB","Mongoose","RESTful APIs","Tailwind CSS","Router", "Context API","Stripe API","JWT Authentication","Axios","Vite","ES6+ Javascript"],
+    githubLink: "https://github.com/Jayasridhara/DoctorAppointment_main_frontend",
+    demoLink: "https://prescriptoin.netlify.app/",
+    image: project2
+  },
+  {
+    title: "MERN Car Rental Booking Application",
+    description: "A full-stack Car Rental Application built with the MERN stack, featuring secure JWT authentication, real-time car availability checks, ImageKit-powered image uploads, and Cash on Delivery booking support. Users can browse cars, manage profiles, and track their bookings, while car owners can add vehicles, manage availability, view bookings, and access a detailed dashboard with revenue analytics and booking statistics. The platform uses React, TailwindCSS, Node.js, Express, MongoDB, and ImageKit for a seamless and optimized rental experience.",
+    techStack: ["React.js", "Node.js", "Express", "Mongo DB","Mongoose","RESTful APIs","Tailwind CSS","Router", "Context API","JWT Authentication","Axios","Vite","ES6+ Javascript"],
+    githubLink: "https://github.com/Jayasridhara/CarRentalApplicationClient",
+    demoLink: "https://carrentalbook.netlify.app/",
+    image: project3
+  }
+
+  
+
+
+
+
 ];
 
 
@@ -463,66 +488,68 @@ const Hero = () => (
     };
 
     return (
-      <Section id="contact" className="bg-gray-800">
-        <FadeInOnScroll animation="fadeInUp" className="text-center mb-16">
-          <h3 className="text-4xl font-bold text-white mb-2">
-            <Mail className="inline-block w-8 h-8 mr-3 text-teal-400" /> Contact Me
-          </h3>
-          <p className="text-lg text-gray-400">I am currently open to new opportunities. Let's build something great.</p>
-        </FadeInOnScroll>
-        
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-4xl mx-auto">
-          {/* Social Links / Info */}
-          <FadeInOnScroll animation="fadeInLeft" delay={200} className="flex flex-col space-y-6 text-gray-300">
-            <h4 className="text-xl font-semibold text-white">Contact Information</h4>
-            <div className="flex items-center space-x-4">
-              <Mail className="w-6 h-6 text-teal-400" />
-              <a href="mailto:jayasridharasubramaniyan@gmail.com" className="hover:text-teal-400 transition">jayasridharasubramaniyan@gmail.com</a>
-            </div>
-            <div className="flex items-center space-x-4">
-              <Linkedin className="w-6 h-6 text-teal-400" />
-              <a href="https://www.linkedin.com/in/jayasridhara-b-4931a8220/" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400 transition">https://www.linkedin.com/in/jayasridhara-b-4931a8220/</a>
-            </div>
-            <div className="flex items-center space-x-4">
-              <Github className="w-6 h-6 text-teal-400" />
-              <a href="https://github.com/Jayasridhara" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400 transition">https://github.com/Jayasridhara</a>
-            </div>
-           
-            
-          </FadeInOnScroll>
+     <Section id="contact" className="bg-gray-900 py-24">
+      <FadeInOnScroll animation="fadeInUp" className="text-center mb-12">
+        <h3 className="text-4xl font-bold text-white mb-3 flex items-center justify-center gap-3">
+          <Mail className="w-8 h-8 text-teal-400" />
+          Contact Me
+        </h3>
+        <p className="text-gray-400 text-lg max-w-xl mx-auto">
+          Feel free to reach out — I'm open to new opportunities and collaborations.
+        </p>
+      </FadeInOnScroll>
 
-          {/* Contact Form */}
-          <FadeInOnScroll animation="fadeInRight" delay={400} className="bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-700">
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">Name</label>
-                <input type="text" name="name" id="name" required value={formData.name} onChange={handleChange}
-                  className="w-full px-4 py-3 bg-gray-700 text-white border-none rounded-lg focus:ring-teal-500 focus:border-teal-500"/>
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">Email</label>
-                <input type="email" name="email" id="email" required value={formData.email} onChange={handleChange}
-                  className="w-full px-4 py-3 bg-gray-700 text-white border-none rounded-lg focus:ring-teal-500 focus:border-teal-500"/>
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-1">Message</label>
-                <textarea name="message" id="message" rows="5" required value={formData.message} onChange={handleChange}
-                  className="w-full px-4 py-3 bg-gray-700 text-white border-none rounded-lg focus:ring-teal-500 focus:border-teal-500 resize-none"></textarea>
-              </div>
-              <div className="pt-2">
-                 <button type="submit"
-                      className="w-full inline-flex items-center justify-center bg-teal-600 text-gray-900 px-6 py-3 rounded-lg font-bold shadow-xl hover:bg-teal-500 transition duration-300 disabled:opacity-50"
-                      disabled={status === 'Sending...'}
-                >
-                   <Mail className="w-5 h-5 mr-2"/>
-                   {status === 'Sending...' ? 'Sending...' : 'Send Message'}
-                </button>
-                {status && <p className={`mt-3 text-center text-sm ${status.includes('Sent') ? 'text-green-400' : 'text-red-400'}`}>{status}</p>}
-              </div>
-            </form>
-          </FadeInOnScroll>
-        </div>
-      </Section>
+      <div className="max-w-xl mx-auto bg-gray-800 p-10 rounded-2xl shadow-xl border border-gray-700 hover:shadow-teal-500/20 transition-shadow duration-300">
+        <FadeInOnScroll animation="fadeInUp" delay={200} className="space-y-8 text-center text-gray-300">
+
+          <h4 className="text-xl font-semibold text-white">Contact Information</h4>
+
+          <div className="space-y-5">
+            <div className="flex items-center justify-center gap-3">
+              <Mail className="w-6 h-6 text-teal-400" />
+              <a href="mailto:jayasridharasubramaniyan@gmail.com" className="hover:text-teal-400 transition">
+                jayasridharasubramaniyan@gmail.com
+              </a>
+            </div>
+
+            <div className="flex items-center justify-center gap-3">
+              <Linkedin className="w-6 h-6 text-teal-400" />
+              <a
+                href="https://www.linkedin.com/in/jayasridhara-b-4931a8220/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-teal-400 transition"
+              >
+                linkedin.com/in/jayasridhara-b-4931a8220
+              </a>
+            </div>
+
+            <div className="flex items-center justify-center gap-3">
+              <Github className="w-6 h-6 text-teal-400" />
+              <a
+                href="https://github.com/Jayasridhara"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-teal-400 transition"
+              >
+                github.com/Jayasridhara
+              </a>
+            </div>
+          </div>
+
+          {/* Button */}
+          <a
+            href="mailto:jayasridharasubramaniyan@gmail.com"
+            className="mt-6 inline-flex items-center justify-center bg-teal-500 text-gray-900 px-8 py-3 rounded-lg font-semibold shadow-lg hover:bg-teal-400 transition duration-300"
+          >
+            <Mail className="w-5 h-5 mr-2" />
+            Send Message
+          </a>
+        </FadeInOnScroll>
+      </div>
+    </Section>
+
+
     );
   }
 
