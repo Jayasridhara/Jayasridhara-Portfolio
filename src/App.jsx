@@ -5,7 +5,8 @@
   import project2 from "../src/assets/Project2.png";
   import project3 from "../src/assets/Project3.png";
   import Projects from './Projects';
-  
+  import { MdEmail } from "react-icons/md";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
   // Placeholder for your Resume PDF. IMPORTANT: Update this URL to your actual resume file!
   const RESUME_PDF_URL = 'https://drive.google.com/file/d/1iF8QIR3FMmHqGkVLDmnOTpAthZCMmmB0/view'; 
 
@@ -466,8 +467,8 @@
 
 
     // --- Contact Section ---
-  // --- Contact Section ---
-const Contact = () => {
+ const Contact = () => {
+  const accessapi=import.meta.env.VITE_ACCESS_API
   const [result, setResult] = useState("");
   const [showPopup, setShowPopup] = useState(false);
 
@@ -475,8 +476,7 @@ const Contact = () => {
     event.preventDefault();
     const formData = new FormData(event.target);
 
-    // Web3Forms Access Key
-    formData.append("access_key", "5da08a7d-4acc-4b22-9bb0-9af1c6ae5890");
+    formData.append("access_key", accessapi);
     formData.append("subject", "New Contact Message from Portfolio");
     formData.append("from_name", "Portfolio Contact Form");
 
@@ -489,11 +489,11 @@ const Contact = () => {
 
     if (data.success) {
       setResult("Success!");
-      setShowPopup(true);        // Show popup
-      event.target.reset();      // Clear form
+      setShowPopup(true);
+      event.target.reset();
 
       setTimeout(() => {
-        setShowPopup(false);     // Hide popup after 2 sec
+        setShowPopup(false);
         setResult("");
       }, 3000);
     } else {
@@ -503,7 +503,7 @@ const Contact = () => {
 
   return (
     <>
-      {/* --- Success Popup --- */}
+      {/* Popup */}
       {showPopup && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
           <div className="bg-white p-8 rounded-2xl shadow-2xl text-center max-w-sm w-full">
@@ -533,57 +533,102 @@ const Contact = () => {
           </p>
         </FadeInOnScroll>
 
-        <div className="max-w-xl mx-auto bg-gray-800 p-10 rounded-2xl shadow-xl border border-gray-700 hover:shadow-teal-500/20 transition-shadow duration-300">
-          <FadeInOnScroll animation="fadeInUp" delay={200} className="space-y-8 text-gray-300">
+        {/* FLEX LAYOUT */}
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-10 items-start">
 
-            <h4 className="text-xl font-semibold text-white text-center">
-              Contact Information
-            </h4>
+          {/* LEFT SIDE – SOCIAL LINKS */}
+          <div className="flex-1 bg-gray-800 p-10 rounded-2xl shadow-xl border border-gray-700 text-white space-y-6">
+          <h4 className="text-2xl font-semibold mb-4">Contact Details</h4>
 
-            <form onSubmit={onSubmit} className="space-y-6">
+          <div className="space-y-4 text-gray-300">
 
-              <div>
-                <label className="text-gray-300 block mb-2">Your Name</label>
-                <input
-                  type="text"
-                  name="name"
-                  required
-                  placeholder="Enter your name"
-                  className="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-teal-400 outline-none"
-                />
-              </div>
+            {/* Email */}
+            <a
+              href="mailto:jayasridharasubramaniyan@gmail.com"
+              className="flex items-center gap-3 hover:text-teal-400 transition"
+            >
+              <MdEmail className="w-6 h-6 text-teal-400" />
+              jayasridharasubramaniyan@gmail.com
+            </a>
 
-              <div>
-                <label className="text-gray-300 block mb-2">Your Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  placeholder="Enter your email"
-                  className="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-teal-400 outline-none"
-                />
-              </div>
+            {/* LinkedIn */}
+            <a
+              href="https://www.linkedin.com/in/jayasridhara-b-4931a8220/"
+              target="_blank"
+              className="flex items-center gap-3 hover:text-teal-400 transition"
+            >
+              <FaLinkedin className="w-6 h-6 text-teal-400" />
+              linkedin.com/in/jayasridhara-b-4931a8220/
+            </a>
 
-              <div>
-                <label className="text-gray-300 block mb-2">Message</label>
-                <textarea
-                  name="message"
-                  required
-                  placeholder="Type your message..."
-                  className="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-teal-400 outline-none h-32 resize-none"
-                ></textarea>
-              </div>
+            {/* GitHub */}
+            <a
+              href="https://github.com/Jayasridhara"
+              target="_blank"
+              className="flex items-center gap-3 hover:text-teal-400 transition"
+            >
+              <FaGithub className="w-6 h-6 text-teal-400" />
+              github.com/Jayasridhara
+            </a>
 
-              <button
-                type="submit"
-                className="w-full bg-teal-500 text-gray-900 py-3 rounded-lg font-semibold shadow-lg hover:bg-teal-400 transition"
-              >
-                Send Message
-              </button>
+          </div>
+        </div>
 
-              <p className="text-center text-white mt-2">{result}</p>
-            </form>
-          </FadeInOnScroll>
+
+          {/* RIGHT SIDE – FORM */}
+          <div className="flex-1 bg-gray-800 p-10 rounded-2xl shadow-xl border border-gray-700 hover:shadow-teal-500/20 transition-shadow duration-300">
+            <FadeInOnScroll animation="fadeInUp" delay={200} className="space-y-8 text-gray-300">
+
+              <h4 className="text-xl font-semibold text-white text-center">
+                Send a Message
+              </h4>
+
+              <form onSubmit={onSubmit} className="space-y-6">
+
+                <div>
+                  <label className="text-gray-300 block mb-2">Your Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    required
+                    placeholder="Enter your name"
+                    className="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-teal-400 outline-none"
+                  />
+                </div>
+
+                <div>
+                  <label className="text-gray-300 block mb-2">Your Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    placeholder="Enter your email"
+                    className="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-teal-400 outline-none"
+                  />
+                </div>
+
+                <div>
+                  <label className="text-gray-300 block mb-2">Message</label>
+                  <textarea
+                    name="message"
+                    required
+                    placeholder="Type your message..."
+                    className="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-teal-400 outline-none h-32 resize-none"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full bg-teal-500 text-gray-900 py-3 rounded-lg font-semibold shadow-lg hover:bg-teal-400 transition"
+                >
+                  Send Message
+                </button>
+
+                <p className="text-center text-white mt-2">{result}</p>
+              </form>
+            </FadeInOnScroll>
+          </div>
+
         </div>
       </Section>
     </>
