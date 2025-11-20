@@ -620,7 +620,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 
                 <button
                   type="submit"
-                  className="w-full bg-teal-500 text-gray-900 py-3 rounded-lg font-semibold shadow-lg hover:bg-teal-400 transition"
+                  className="w-full bg-teal-500 text-gray-900 py-3 rounded-lg font-semibold shadow-lg hover:bg-teal-400 transition cursor-pointer"
                 >
                   Send Message
                 </button>
