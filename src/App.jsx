@@ -537,19 +537,20 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-10 items-start">
 
           {/* LEFT SIDE – SOCIAL LINKS */}
-          <div className="flex-1 bg-gray-800 p-10 rounded-2xl shadow-xl border border-gray-700 text-white space-y-6">
+          <div className="w-full md:flex-1 bg-gray-800 p-6 md:p-10 rounded-2xl shadow-xl border border-gray-700 text-white space-y-6 hover:shadow-teal-500/20">
           <h4 className="text-2xl font-semibold mb-4">Contact Details</h4>
 
           <div className="space-y-4 text-gray-300">
 
             {/* Email */}
-            <a
-              href="mailto:jayasridharasubramaniyan@gmail.com"
-              className="flex items-center gap-3 hover:text-teal-400 transition"
-            >
-              <MdEmail className="w-6 h-6 text-teal-400" />
-              jayasridharasubramaniyan@gmail.com
-            </a>
+           <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=jayasridharasubramaniyan@gmail.com"
+          target="_blank"
+          className="flex items-center gap-3 hover:text-teal-400 transition"
+        >
+         <MdEmail className=" w-4 h-4 text-2xl text-teal-400" />
+          jayasridharasubramaniyan@gmail.com
+        </a>
 
             {/* LinkedIn */}
             <a
@@ -557,7 +558,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
               target="_blank"
               className="flex items-center gap-3 hover:text-teal-400 transition"
             >
-              <FaLinkedin className="w-6 h-6 text-teal-400" />
+              <FaLinkedin className="w-4 h-4 text-2xl text-teal-400" />
               linkedin.com/in/jayasridhara-b-4931a8220/
             </a>
 
@@ -567,7 +568,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
               target="_blank"
               className="flex items-center gap-3 hover:text-teal-400 transition"
             >
-              <FaGithub className="w-6 h-6 text-teal-400" />
+              <FaGithub className="w-4 h-4 text-2xl text-teal-400" />
               github.com/Jayasridhara
             </a>
 
@@ -576,7 +577,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 
           {/* RIGHT SIDE – FORM */}
-          <div className="flex-1 bg-gray-800 p-10 rounded-2xl shadow-xl border border-gray-700 hover:shadow-teal-500/20 transition-shadow duration-300">
+          <div className="flex-1 bg-gray-800 p-15 rounded-2xl shadow-xl border border-gray-700 hover:shadow-teal-500/20 transition-shadow duration-300">
             <FadeInOnScroll animation="fadeInUp" delay={200} className="space-y-8 text-gray-300">
 
               <h4 className="text-xl font-semibold text-white text-center">
